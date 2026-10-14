@@ -1,0 +1,1362 @@
+{
+  "provenance": {
+    "dataset": "Residential Short Term Rental Permits (Metro Nashville open data)",
+    "source_service": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Residential_Short_Term_Rental_Permits_view/FeatureServer/0",
+    "hub_item_id": "b5315bda43ac459281dd35f04aa1be32",
+    "pull_date": "2026-10-13",
+    "rows_pulled": 17612,
+    "fields": [
+      "Permit__",
+      "Permit_Subtype_Description",
+      "Date_Entered",
+      "Date_Issued",
+      "Address",
+      "City",
+      "State",
+      "Subdivision_Lot",
+      "Permit_Type",
+      "Permit_SubType",
+      "Purpose",
+      "Council_Dist",
+      "Census_Tract",
+      "Expiration_Date",
+      "Permit_Owner_Name",
+      "Permit_Owner_Addr1",
+      "Permit_Owner_Addr2",
+      "Permit_Owner_Addr3",
+      "Permit_Owner_City",
+      "Permit_Owner_State",
+      "Permit_Owner_Zip",
+      "Permit_Status",
+      "Applicant",
+      "Contact",
+      "Lon",
+      "Lat",
+      "ObjectId",
+      "ZIP",
+      "Parcel"
+    ],
+    "note": "Historical Socrata copy (data.nashville.gov dataset 2z82-v8pm) no longer resolves; the ArcGIS Feature Service above is the current publisher endpoint. Phone-number columns were dropped from the saved CSV (see download.py)."
+  },
+  "all_records": {
+    "rows": 17612,
+    "status_counts": {
+      "EXPIRED": 8024,
+      "ISSUED": 7017,
+      "CANCELLED": 2266,
+      "REVOKED": 164,
+      "EXPIREEXT": 42,
+      "DENIED-D": 38,
+      "PENDING": 37,
+      "HOLD": 18,
+      "REFUNDED": 3,
+      "VOID": 2,
+      "OK TO PAY": 1
+    },
+    "class_counts": {
+      "owner_occupied": 6295,
+      "not_owner_occupied": 11317,
+      "unknown": 0
+    },
+    "unique_permit_numbers": 17582,
+    "unique_property_addresses_normalized": 14343,
+    "unique_parcels": 10730,
+    "issue_year_counts": {
+      "2015": 1173,
+      "2016": 1291,
+      "2017": 1675,
+      "2018": 2181,
+      "2019": 1993,
+      "2020": 926,
+      "2021": 1319,
+      "2022": 2106,
+      "2023": 1062,
+      "2024": 1128,
+      "2025": 756,
+      "2026": 474
+    },
+    "date_issued_parse_rate_pct": 91.3,
+    "top_zips": [
+      {
+        "key": "37203",
+        "permits": 3497,
+        "share_pct": 19.9
+      },
+      {
+        "key": "37206",
+        "permits": 1964,
+        "share_pct": 11.2
+      },
+      {
+        "key": "37207",
+        "permits": 1619,
+        "share_pct": 9.2
+      },
+      {
+        "key": "37208",
+        "permits": 1552,
+        "share_pct": 8.8
+      },
+      {
+        "key": "37212",
+        "permits": 1421,
+        "share_pct": 8.1
+      },
+      {
+        "key": "37209",
+        "permits": 1280,
+        "share_pct": 7.3
+      },
+      {
+        "key": "37216",
+        "permits": 998,
+        "share_pct": 5.7
+      },
+      {
+        "key": "37210",
+        "permits": 845,
+        "share_pct": 4.8
+      },
+      {
+        "key": "37201",
+        "permits": 705,
+        "share_pct": 4.0
+      },
+      {
+        "key": "37211",
+        "permits": 588,
+        "share_pct": 3.3
+      }
+    ]
+  },
+  "current_permits_issued": {
+    "rows": 7017,
+    "method": "Permit_Status == 'ISSUED'; verified 100% of these rows have Expiration_Date after the pull date.",
+    "share_of_all_records_pct": 39.8,
+    "class_counts": {
+      "owner_occupied": 2006,
+      "not_owner_occupied": 5011,
+      "unknown": 0
+    },
+    "not_owner_occupied_share_pct": 71.4,
+    "unique_property_addresses_normalized": 6976,
+    "unique_parcels": 5472,
+    "all_have_expiration_on_or_after_pull_date": true,
+    "expiring_on_pull_date_n": 3,
+    "subtype_code_counts_as_recorded": {
+      "Short Term Rental \u2013 Not Owner Occupied": 4676,
+      "Short Term Rental - Owner Occupied": 2006,
+      "Short Term Rental - Non-Owner Occupied": 335
+    },
+    "top_zips": [
+      {
+        "key": "37203",
+        "permits": 1710,
+        "share_pct": 24.4
+      },
+      {
+        "key": "37207",
+        "permits": 809,
+        "share_pct": 11.5
+      },
+      {
+        "key": "37208",
+        "permits": 721,
+        "share_pct": 10.3
+      },
+      {
+        "key": "37206",
+        "permits": 665,
+        "share_pct": 9.5
+      },
+      {
+        "key": "37212",
+        "permits": 461,
+        "share_pct": 6.6
+      },
+      {
+        "key": "37209",
+        "permits": 451,
+        "share_pct": 6.4
+      },
+      {
+        "key": "37201",
+        "permits": 346,
+        "share_pct": 4.9
+      },
+      {
+        "key": "37210",
+        "permits": 335,
+        "share_pct": 4.8
+      },
+      {
+        "key": "37216",
+        "permits": 312,
+        "share_pct": 4.4
+      },
+      {
+        "key": "37211",
+        "permits": 192,
+        "share_pct": 2.7
+      }
+    ],
+    "top5_zip_share_pct": 62.2,
+    "distinct_property_zips": 31,
+    "top_council_districts": [
+      {
+        "key": "19",
+        "permits": 1889,
+        "share_pct": 26.9
+      },
+      {
+        "key": "17",
+        "permits": 960,
+        "share_pct": 13.7
+      },
+      {
+        "key": "5",
+        "permits": 802,
+        "share_pct": 11.4
+      },
+      {
+        "key": "21",
+        "permits": 763,
+        "share_pct": 10.9
+      },
+      {
+        "key": "2",
+        "permits": 456,
+        "share_pct": 6.5
+      },
+      {
+        "key": "6",
+        "permits": 438,
+        "share_pct": 6.2
+      },
+      {
+        "key": "18",
+        "permits": 259,
+        "share_pct": 3.7
+      },
+      {
+        "key": "7",
+        "permits": 225,
+        "share_pct": 3.2
+      },
+      {
+        "key": "16",
+        "permits": 204,
+        "share_pct": 2.9
+      },
+      {
+        "key": "15",
+        "permits": 180,
+        "share_pct": 2.6
+      }
+    ]
+  },
+  "geography": {
+    "method": "See module docstring. Tiers computed per record on the owner mailing address fields (Permit_Owner_City/State/Zip), never on the property address.",
+    "property_zip_footprint": [
+      "37013",
+      "37015",
+      "37027",
+      "37064",
+      "37072",
+      "37076",
+      "37080",
+      "37115",
+      "37122",
+      "37135",
+      "37138",
+      "37143",
+      "37189",
+      "37201",
+      "37203",
+      "37204",
+      "37205",
+      "37206",
+      "37207",
+      "37208",
+      "37209",
+      "37210",
+      "37211",
+      "37212",
+      "37213",
+      "37214",
+      "37215",
+      "37216",
+      "37217",
+      "37218",
+      "37219",
+      "37220",
+      "37221",
+      "37228"
+    ],
+    "all_records": {
+      "zip_buckets": {
+        "base_rows_with_owner_zip": 17469,
+        "out_of_state": 3868,
+        "in_tennessee_outside_county_footprint": 921,
+        "inside_county_footprint": 12680,
+        "note": "Mutually exclusive buckets on rows with a usable owner mailing ZIP. Out-of-state uses the owner state field; the footprint test uses the owner ZIP against the property ZIPs observed in the file."
+      },
+      "scope": "all records",
+      "rows": 17612,
+      "rows_with_owner_geography": 17539,
+      "share_out_of_state_pct": 22.4,
+      "out_of_state_n": 3935,
+      "rows_with_owner_zip": 17469,
+      "share_outside_county_zip_footprint_pct": 27.4,
+      "outside_county_zip_footprint_n": 4789,
+      "share_same_zip_as_property_pct": 48.1
+    },
+    "current_issued": {
+      "zip_buckets": {
+        "base_rows_with_owner_zip": 6996,
+        "out_of_state": 2031,
+        "in_tennessee_outside_county_footprint": 491,
+        "inside_county_footprint": 4474,
+        "note": "Mutually exclusive buckets on rows with a usable owner mailing ZIP. Out-of-state uses the owner state field; the footprint test uses the owner ZIP against the property ZIPs observed in the file."
+      },
+      "scope": "current permits (ISSUED)",
+      "rows": 7017,
+      "rows_with_owner_geography": 6999,
+      "share_out_of_state_pct": 29.0,
+      "out_of_state_n": 2033,
+      "rows_with_owner_zip": 6996,
+      "share_outside_county_zip_footprint_pct": 36.0,
+      "outside_county_zip_footprint_n": 2522,
+      "share_same_zip_as_property_pct": 37.4
+    },
+    "current_issued_owner_occupied": {
+      "zip_buckets": {
+        "base_rows_with_owner_zip": 2000,
+        "out_of_state": 15,
+        "in_tennessee_outside_county_footprint": 14,
+        "inside_county_footprint": 1971,
+        "note": "Mutually exclusive buckets on rows with a usable owner mailing ZIP. Out-of-state uses the owner state field; the footprint test uses the owner ZIP against the property ZIPs observed in the file."
+      },
+      "scope": "current, owner occupied",
+      "rows": 2006,
+      "rows_with_owner_geography": 2000,
+      "share_out_of_state_pct": 0.8,
+      "out_of_state_n": 15,
+      "rows_with_owner_zip": 2000,
+      "share_outside_county_zip_footprint_pct": 1.4,
+      "outside_county_zip_footprint_n": 29,
+      "share_same_zip_as_property_pct": 95.3
+    },
+    "current_issued_not_owner_occupied": {
+      "zip_buckets": {
+        "base_rows_with_owner_zip": 4996,
+        "out_of_state": 2016,
+        "in_tennessee_outside_county_footprint": 477,
+        "inside_county_footprint": 2503,
+        "note": "Mutually exclusive buckets on rows with a usable owner mailing ZIP. Out-of-state uses the owner state field; the footprint test uses the owner ZIP against the property ZIPs observed in the file."
+      },
+      "scope": "current, not owner occupied",
+      "rows": 5011,
+      "rows_with_owner_geography": 4999,
+      "share_out_of_state_pct": 40.4,
+      "out_of_state_n": 2018,
+      "rows_with_owner_zip": 4996,
+      "share_outside_county_zip_footprint_pct": 49.9,
+      "outside_county_zip_footprint_n": 2493,
+      "share_same_zip_as_property_pct": 14.2
+    },
+    "current_issued_top_out_of_state_owner_states": [
+      {
+        "state": "CA",
+        "permits": 578
+      },
+      {
+        "state": "FL",
+        "permits": 400
+      },
+      {
+        "state": "TX",
+        "permits": 142
+      },
+      {
+        "state": "NY",
+        "permits": 141
+      },
+      {
+        "state": "IL",
+        "permits": 67
+      },
+      {
+        "state": "KY",
+        "permits": 52
+      },
+      {
+        "state": "OH",
+        "permits": 49
+      },
+      {
+        "state": "CO",
+        "permits": 45
+      }
+    ],
+    "current_issued_top_owner_mailing_cities_outside_footprint": [
+      {
+        "city_state": "MIAMI, FL",
+        "permits": 330
+      },
+      {
+        "city_state": "SAN FRANCISCO, CA",
+        "permits": 287
+      },
+      {
+        "city_state": "NEW YORK, NY",
+        "permits": 94
+      },
+      {
+        "city_state": "FRANKLIN, TN",
+        "permits": 79
+      },
+      {
+        "city_state": "MURFREESBORO, TN",
+        "permits": 76
+      },
+      {
+        "city_state": "HOUSTON, TX",
+        "permits": 67
+      },
+      {
+        "city_state": "NASHVILLE, TN",
+        "permits": 47
+      },
+      {
+        "city_state": "HENDERSONVILLE, TN",
+        "permits": 40
+      }
+    ]
+  },
+  "owner_concentration": {
+    "method": "Owner key = normalized Permit_Owner_Name (see docstring). Concentration is a floor: spelling variants of one owner can survive normalization as separate keys.",
+    "all_records": {
+      "scope": "all records",
+      "rows_with_owner_name": 17599,
+      "unique_owners": 10896,
+      "owners_by_permit_count_bucket": {
+        "1 permit": 9141,
+        "2-4 permits": 1500,
+        "5-9 permits": 128,
+        "10-24 permits": 76,
+        "25+ permits": 51
+      },
+      "owners_with_10plus_permits": 127,
+      "permits_held_by_10plus_owners": 4232,
+      "share_of_scope_permits_held_by_10plus_owners_pct": 24.0,
+      "owners_with_5plus_permits": 255,
+      "permits_held_by_5plus_owners": 5041,
+      "share_of_scope_permits_held_by_5plus_owners_pct": 28.6,
+      "top_10_owners": [
+        {
+          "owner_key": "BOP NEST NASHVILLE",
+          "permits": 343,
+          "not_owner_occupied": 343,
+          "owner_mailing_city": "MIAMI",
+          "owner_mailing_state": "FL"
+        },
+        {
+          "owner_key": "SIXTH SOUTH PARTNERS",
+          "permits": 302,
+          "not_owner_occupied": 302,
+          "owner_mailing_city": "SAN FRANCISCO",
+          "owner_mailing_state": "CA"
+        },
+        {
+          "owner_key": "505 APARTMENTS",
+          "permits": 139,
+          "not_owner_occupied": 139,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "VIBE AT MARATHON VILLAGE",
+          "permits": 127,
+          "not_owner_occupied": 127,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "500 FIFTH",
+          "permits": 113,
+          "not_owner_occupied": 113,
+          "owner_mailing_city": "NEW YORK",
+          "owner_mailing_state": "NY"
+        },
+        {
+          "owner_key": "ALTO PARTNERS",
+          "permits": 110,
+          "not_owner_occupied": 110,
+          "owner_mailing_city": "FRANKLIN",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "TBR L VILLAGE 21 OWNER",
+          "permits": 97,
+          "not_owner_occupied": 97,
+          "owner_mailing_city": "ATLANTA",
+          "owner_mailing_state": "GA"
+        },
+        {
+          "owner_key": "MIDTOWN PLACE",
+          "permits": 93,
+          "not_owner_occupied": 93,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "301 EIGHTH AVENUE LLC ET AL",
+          "permits": 87,
+          "not_owner_occupied": 87,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "GL ELLISTON 23 APARTMENTS LLC ET AL",
+          "permits": 80,
+          "not_owner_occupied": 80,
+          "owner_mailing_city": "MIAMISBURG",
+          "owner_mailing_state": "OH"
+        }
+      ]
+    },
+    "current_issued": {
+      "scope": "current permits (ISSUED)",
+      "rows_with_owner_name": 7017,
+      "unique_owners": 4696,
+      "owners_by_permit_count_bucket": {
+        "1 permit": 4250,
+        "2-4 permits": 350,
+        "5-9 permits": 49,
+        "10-24 permits": 34,
+        "25+ permits": 13
+      },
+      "owners_with_10plus_permits": 47,
+      "permits_held_by_10plus_owners": 1569,
+      "share_of_scope_permits_held_by_10plus_owners_pct": 22.4,
+      "owners_with_5plus_permits": 96,
+      "permits_held_by_5plus_owners": 1900,
+      "share_of_scope_permits_held_by_5plus_owners_pct": 27.1,
+      "top_10_owners": [
+        {
+          "owner_key": "BOP NEST NASHVILLE",
+          "permits": 328,
+          "not_owner_occupied": 328,
+          "owner_mailing_city": "MIAMI",
+          "owner_mailing_state": "FL"
+        },
+        {
+          "owner_key": "SIXTH SOUTH PARTNERS",
+          "permits": 289,
+          "not_owner_occupied": 289,
+          "owner_mailing_city": "SAN FRANCISCO",
+          "owner_mailing_state": "CA"
+        },
+        {
+          "owner_key": "VIBE AT MARATHON VILLAGE",
+          "permits": 68,
+          "not_owner_occupied": 68,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "1212 9TH AVENUE NORTH",
+          "permits": 57,
+          "not_owner_occupied": 57,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "301 EIGHTH AVENUE LLC ET AL",
+          "permits": 56,
+          "not_owner_occupied": 56,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "HOWELL PARK PARTNERS",
+          "permits": 40,
+          "not_owner_occupied": 40,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "HAVEN AT THE GULCH",
+          "permits": 37,
+          "not_owner_occupied": 37,
+          "owner_mailing_city": "HOUSTON",
+          "owner_mailing_state": "TX"
+        },
+        {
+          "owner_key": "BANNER BUILDING PARTNERSHIP",
+          "permits": 31,
+          "not_owner_occupied": 31,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "TRIO MUSIC ROW LLC THE",
+          "permits": 30,
+          "not_owner_occupied": 30,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        },
+        {
+          "owner_key": "ECG BELCOURT",
+          "permits": 28,
+          "not_owner_occupied": 27,
+          "owner_mailing_city": "NASHVILLE",
+          "owner_mailing_state": "TN"
+        }
+      ]
+    }
+  },
+  "portfolio_shape_current_issued": {
+    "method": "Grouped by normalized property Address and by Parcel among ISSUED records.",
+    "addresses_with_10plus_permits": 1,
+    "permits_at_addresses_with_10plus": 15,
+    "share_permits_at_addresses_with_10plus_pct": 0.2,
+    "parcels_with_10plus_permits": 34,
+    "permits_at_parcels_with_10plus": 1319,
+    "share_permits_at_parcels_with_10plus_pct": 18.8,
+    "largest_single_address": {
+      "address": "321 MCMILLIN ST",
+      "permits": 15
+    },
+    "top_5_owner_address_spread": [
+      {
+        "owner_key": "BOP NEST NASHVILLE",
+        "permits": 328,
+        "unique_property_addresses": 326,
+        "top_address": "501 REP JOHN LEWIS WAY S 507",
+        "top_address_permits": 2
+      },
+      {
+        "owner_key": "SIXTH SOUTH PARTNERS",
+        "permits": 289,
+        "unique_property_addresses": 289,
+        "top_address": "516 LEA AVE 1001",
+        "top_address_permits": 1
+      },
+      {
+        "owner_key": "VIBE AT MARATHON VILLAGE",
+        "permits": 68,
+        "unique_property_addresses": 68,
+        "top_address": "1601 HERMAN ST 101",
+        "top_address_permits": 1
+      },
+      {
+        "owner_key": "1212 9TH AVENUE NORTH",
+        "permits": 57,
+        "unique_property_addresses": 57,
+        "top_address": "1212 9TH AVE N 104",
+        "top_address_permits": 1
+      },
+      {
+        "owner_key": "301 EIGHTH AVENUE LLC ET AL",
+        "permits": 56,
+        "unique_property_addresses": 56,
+        "top_address": "301 ROSA L PARKS AVE 100",
+        "top_address_permits": 1
+      }
+    ]
+  },
+  "issue_year_by_class": {
+    "2015": {
+      "total": 1173,
+      "owner_occupied": 373,
+      "not_owner_occupied": 800,
+      "unknown": 0
+    },
+    "2016": {
+      "total": 1291,
+      "owner_occupied": 494,
+      "not_owner_occupied": 797,
+      "unknown": 0
+    },
+    "2017": {
+      "total": 1675,
+      "owner_occupied": 684,
+      "not_owner_occupied": 991,
+      "unknown": 0
+    },
+    "2018": {
+      "total": 2181,
+      "owner_occupied": 967,
+      "not_owner_occupied": 1214,
+      "unknown": 0
+    },
+    "2019": {
+      "total": 1993,
+      "owner_occupied": 803,
+      "not_owner_occupied": 1190,
+      "unknown": 0
+    },
+    "2020": {
+      "total": 926,
+      "owner_occupied": 288,
+      "not_owner_occupied": 638,
+      "unknown": 0
+    },
+    "2021": {
+      "total": 1319,
+      "owner_occupied": 318,
+      "not_owner_occupied": 1001,
+      "unknown": 0
+    },
+    "2022": {
+      "total": 2106,
+      "owner_occupied": 560,
+      "not_owner_occupied": 1546,
+      "unknown": 0
+    },
+    "2023": {
+      "total": 1062,
+      "owner_occupied": 452,
+      "not_owner_occupied": 610,
+      "unknown": 0
+    },
+    "2024": {
+      "total": 1128,
+      "owner_occupied": 360,
+      "not_owner_occupied": 768,
+      "unknown": 0
+    },
+    "2025": {
+      "total": 756,
+      "owner_occupied": 225,
+      "not_owner_occupied": 531,
+      "unknown": 0
+    },
+    "2026": {
+      "total": 474,
+      "owner_occupied": 127,
+      "not_owner_occupied": 347,
+      "unknown": 0
+    }
+  },
+  "data_quality": {
+    "owner_name_blank_rows": 13,
+    "owner_zip_blank_or_unusable_rows": 143,
+    "owner_state_blank_rows": 94,
+    "property_zip_blank_rows": 0,
+    "council_district_blank_rows": 7,
+    "duplicate_permit_number_rows": 30,
+    "subtype_code_history": "CAZ10A002 (not owner occupied, legacy label) issued counts by year collapse after 2016 and reach zero by 2024 while CAZ10A003 grows; the two codes are treated as one not-owner-occupied class across eras."
+  },
+  "verification_extensions": {
+    "pass": "Independent verification, 2026-10-13 (see verification.md)",
+    "duplicates_within_current_stock": {
+      "rows_removed": 10,
+      "stock_deduped": 7007,
+      "noo_deduped": 5005,
+      "noo_share_pct_deduped": 71.43,
+      "geo_noo_deduped": {
+        "base_geography": 4993,
+        "out_of_state_pct": 40.34,
+        "base_zip": 4990,
+        "outside_footprint_pct": 49.84
+      }
+    },
+    "expireext_stress_test": {
+      "records": 42,
+      "noo": 20,
+      "oo": 22,
+      "all_carry_expiration_on_or_after_pull_date": true,
+      "expiry_window": "2026-10-13 to 2026-11-08",
+      "stock_if_counted": 7059,
+      "noo_share_pct_if_counted": 71.27
+    },
+    "footprint_sensitivity_current_noo": [
+      {
+        "label": "brief: file property-ZIP footprint",
+        "base": 4996,
+        "outside_n": 2493,
+        "outside_pct": 49.9
+      },
+      {
+        "label": "census: ZCTA has no Davidson land",
+        "base": 4996,
+        "outside_n": 2490,
+        "outside_pct": 49.84
+      },
+      {
+        "label": "census: ZCTA under 50 pct Davidson land",
+        "base": 4996,
+        "outside_n": 2850,
+        "outside_pct": 57.05
+      }
+    ],
+    "footprint_sensitivity_oo_control": [
+      {
+        "label": "brief: file property-ZIP footprint",
+        "base": 2000,
+        "outside_n": 29,
+        "outside_pct": 1.45
+      },
+      {
+        "label": "census: ZCTA under 50 pct Davidson land",
+        "base": 2000,
+        "outside_n": 39,
+        "outside_pct": 1.95
+      }
+    ],
+    "property_type_layer": {
+      "source": "Davidson County assessor parcels (Metro Nashville Parcels view, ArcGIS), LUDesc joined on permit Parcel = STANPAR",
+      "parcel_match_rate_pct": 99.85,
+      "permit_match_rate_pct": 99.76,
+      "buckets": {
+        "bucket_all_current": {
+          "n": 7000,
+          "by_bucket": {
+            "condo": 2837,
+            "multifamily_apartment": 1499,
+            "other:": 279,
+            "other:CLUB/UNION HALL/LODGE": 1,
+            "other:DORMITORY/BOARDING HOUSE": 2,
+            "other:MEDICAL OFFICE (ONE OR TWO STORIES)": 2,
+            "other:NIGHTCLUB/LOUNGE": 19,
+            "other:OFFICE BLDG (3 OR MORE STORIES)": 28,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 91,
+            "other:ONE STORY GENERAL RETAIL STORE": 11,
+            "other:PARKING LOT": 27,
+            "other:RESIDENTIAL COMBO/MISC": 37,
+            "other:RESTURANT/CAFETERIA": 13,
+            "other:RURAL COMBO": 1,
+            "other:SMALL SERVICE SHOP": 2,
+            "other:STRIP SHOPPING CENTER": 28,
+            "other:VACANT COMMERCIAL LAND": 55,
+            "other:VACANT RESIDENTIAL LAND": 230,
+            "other:VACANT RESIENTIAL LAND": 23,
+            "other:VACANT RURAL LAND": 1,
+            "other:ZERO LOT LINE": 22,
+            "single_family": 1792
+          },
+          "pct": {
+            "condo": 40.5,
+            "multifamily_apartment": 21.4,
+            "other:": 4.0,
+            "other:CLUB/UNION HALL/LODGE": 0.0,
+            "other:DORMITORY/BOARDING HOUSE": 0.0,
+            "other:MEDICAL OFFICE (ONE OR TWO STORIES)": 0.0,
+            "other:NIGHTCLUB/LOUNGE": 0.3,
+            "other:OFFICE BLDG (3 OR MORE STORIES)": 0.4,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 1.3,
+            "other:ONE STORY GENERAL RETAIL STORE": 0.2,
+            "other:PARKING LOT": 0.4,
+            "other:RESIDENTIAL COMBO/MISC": 0.5,
+            "other:RESTURANT/CAFETERIA": 0.2,
+            "other:RURAL COMBO": 0.0,
+            "other:SMALL SERVICE SHOP": 0.0,
+            "other:STRIP SHOPPING CENTER": 0.4,
+            "other:VACANT COMMERCIAL LAND": 0.8,
+            "other:VACANT RESIDENTIAL LAND": 3.3,
+            "other:VACANT RESIENTIAL LAND": 0.3,
+            "other:VACANT RURAL LAND": 0.0,
+            "other:ZERO LOT LINE": 0.3,
+            "single_family": 25.6
+          }
+        },
+        "bucket_investor_noo": {
+          "n": 4998,
+          "by_bucket": {
+            "condo": 2547,
+            "multifamily_apartment": 1367,
+            "other:": 268,
+            "other:CLUB/UNION HALL/LODGE": 1,
+            "other:DORMITORY/BOARDING HOUSE": 2,
+            "other:MEDICAL OFFICE (ONE OR TWO STORIES)": 2,
+            "other:NIGHTCLUB/LOUNGE": 19,
+            "other:OFFICE BLDG (3 OR MORE STORIES)": 28,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 89,
+            "other:ONE STORY GENERAL RETAIL STORE": 11,
+            "other:PARKING LOT": 27,
+            "other:RESIDENTIAL COMBO/MISC": 32,
+            "other:RESTURANT/CAFETERIA": 13,
+            "other:SMALL SERVICE SHOP": 2,
+            "other:STRIP SHOPPING CENTER": 27,
+            "other:VACANT COMMERCIAL LAND": 55,
+            "other:VACANT RESIDENTIAL LAND": 217,
+            "other:VACANT RESIENTIAL LAND": 19,
+            "other:ZERO LOT LINE": 12,
+            "single_family": 260
+          },
+          "pct": {
+            "condo": 51.0,
+            "multifamily_apartment": 27.4,
+            "other:": 5.4,
+            "other:CLUB/UNION HALL/LODGE": 0.0,
+            "other:DORMITORY/BOARDING HOUSE": 0.0,
+            "other:MEDICAL OFFICE (ONE OR TWO STORIES)": 0.0,
+            "other:NIGHTCLUB/LOUNGE": 0.4,
+            "other:OFFICE BLDG (3 OR MORE STORIES)": 0.6,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 1.8,
+            "other:ONE STORY GENERAL RETAIL STORE": 0.2,
+            "other:PARKING LOT": 0.5,
+            "other:RESIDENTIAL COMBO/MISC": 0.6,
+            "other:RESTURANT/CAFETERIA": 0.3,
+            "other:SMALL SERVICE SHOP": 0.0,
+            "other:STRIP SHOPPING CENTER": 0.5,
+            "other:VACANT COMMERCIAL LAND": 1.1,
+            "other:VACANT RESIDENTIAL LAND": 4.3,
+            "other:VACANT RESIENTIAL LAND": 0.4,
+            "other:ZERO LOT LINE": 0.2,
+            "single_family": 5.2
+          }
+        },
+        "bucket_owner_occupied": {
+          "n": 2002,
+          "by_bucket": {
+            "condo": 290,
+            "multifamily_apartment": 132,
+            "other:": 11,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 2,
+            "other:RESIDENTIAL COMBO/MISC": 5,
+            "other:RURAL COMBO": 1,
+            "other:STRIP SHOPPING CENTER": 1,
+            "other:VACANT RESIDENTIAL LAND": 13,
+            "other:VACANT RESIENTIAL LAND": 4,
+            "other:VACANT RURAL LAND": 1,
+            "other:ZERO LOT LINE": 10,
+            "single_family": 1532
+          },
+          "pct": {
+            "condo": 14.5,
+            "multifamily_apartment": 6.6,
+            "other:": 0.5,
+            "other:OFFICE BLDG (ONE OR TWO STORIES)": 0.1,
+            "other:RESIDENTIAL COMBO/MISC": 0.2,
+            "other:RURAL COMBO": 0.0,
+            "other:STRIP SHOPPING CENTER": 0.0,
+            "other:VACANT RESIDENTIAL LAND": 0.6,
+            "other:VACANT RESIENTIAL LAND": 0.2,
+            "other:VACANT RURAL LAND": 0.0,
+            "other:ZERO LOT LINE": 0.5,
+            "single_family": 76.5
+          }
+        }
+      },
+      "top_holders": {
+        "holder_BOP NEST NASHVILLE": {
+          "matched_permits": 328,
+          "by_bucket": {
+            "multifamily_apartment": 328
+          },
+          "top_ludesc": [
+            [
+              "APARTMENT: HIGH RISE (3 STORIES OR GREATER)",
+              328
+            ]
+          ]
+        },
+        "holder_SIXTH SOUTH PARTNERS": {
+          "matched_permits": 289,
+          "by_bucket": {
+            "multifamily_apartment": 289
+          },
+          "top_ludesc": [
+            [
+              "APARTMENT: HIGH RISE (3 STORIES OR GREATER)",
+              289
+            ]
+          ]
+        }
+      },
+      "ludesc_distribution_current_permits": [
+        [
+          "RESIDENTIAL CONDO",
+          2831
+        ],
+        [
+          "SINGLE FAMILY",
+          1792
+        ],
+        [
+          "APARTMENT: HIGH RISE (3 STORIES OR GREATER)",
+          958
+        ],
+        [
+          "APARTMENT: LOW RISE (BUILT SINCE 1960)",
+          281
+        ],
+        [
+          null,
+          279
+        ],
+        [
+          "VACANT RESIDENTIAL LAND",
+          230
+        ],
+        [
+          "DUPLEX",
+          170
+        ],
+        [
+          "OFFICE BLDG (ONE OR TWO STORIES)",
+          91
+        ],
+        [
+          "VACANT COMMERCIAL LAND",
+          55
+        ],
+        [
+          "APARTMENT: WALK UP (BUILT PRIOR TO 1960)\r\nA",
+          52
+        ],
+        [
+          "RESIDENTIAL COMBO/MISC",
+          37
+        ],
+        [
+          "OFFICE BLDG (3 OR MORE STORIES)",
+          28
+        ],
+        [
+          "STRIP SHOPPING CENTER",
+          28
+        ],
+        [
+          "PARKING LOT",
+          27
+        ],
+        [
+          "TRIPLEX",
+          26
+        ],
+        [
+          "VACANT RESIENTIAL LAND",
+          23
+        ],
+        [
+          "ZERO LOT LINE",
+          22
+        ],
+        [
+          "NIGHTCLUB/LOUNGE",
+          19
+        ],
+        [
+          "RESTURANT/CAFETERIA",
+          13
+        ],
+        [
+          "QUADPLEX",
+          12
+        ],
+        [
+          "ONE STORY GENERAL RETAIL STORE",
+          11
+        ],
+        [
+          "CONDOMINIUM OFC OR OTHER COM CONDO",
+          5
+        ],
+        [
+          "SMALL SERVICE SHOP",
+          2
+        ],
+        [
+          "MEDICAL OFFICE (ONE OR TWO STORIES)",
+          2
+        ],
+        [
+          "DORMITORY/BOARDING HOUSE",
+          2
+        ],
+        [
+          "RURAL COMBO",
+          1
+        ],
+        [
+          "CLUB/UNION HALL/LODGE",
+          1
+        ],
+        [
+          "CONDOMINIUM OFC  OR OTHER COM CONDO",
+          1
+        ],
+        [
+          "VACANT RURAL LAND",
+          1
+        ]
+      ]
+    },
+    "density_layer": {
+      "source": "ACS 2024 5-year (2020-2024), table B25001, summary file acsdt5y2024-b25001.dat",
+      "coverage": {
+        "permits": 7016,
+        "housing_units": 418152,
+        "overall_per_1000": 16.8
+      },
+      "by_property_zip": [
+        {
+          "zip": "37203",
+          "current_permits": 1710,
+          "acs2024_housing_units": 18304,
+          "permits_per_1000_hu": 93.4,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 24.4
+        },
+        {
+          "zip": "37207",
+          "current_permits": 809,
+          "acs2024_housing_units": 19727,
+          "permits_per_1000_hu": 41.0,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 11.5
+        },
+        {
+          "zip": "37208",
+          "current_permits": 721,
+          "acs2024_housing_units": 11360,
+          "permits_per_1000_hu": 63.5,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 10.3
+        },
+        {
+          "zip": "37206",
+          "current_permits": 665,
+          "acs2024_housing_units": 14065,
+          "permits_per_1000_hu": 47.3,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 9.5
+        },
+        {
+          "zip": "37212",
+          "current_permits": 461,
+          "acs2024_housing_units": 8288,
+          "permits_per_1000_hu": 55.6,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 6.6
+        },
+        {
+          "zip": "37209",
+          "current_permits": 451,
+          "acs2024_housing_units": 22000,
+          "permits_per_1000_hu": 20.5,
+          "davidson_land_share_pct": 99.8,
+          "share_of_current_permits_pct": 6.4
+        },
+        {
+          "zip": "37201",
+          "current_permits": 346,
+          "acs2024_housing_units": 1309,
+          "permits_per_1000_hu": 264.3,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 4.9
+        },
+        {
+          "zip": "37210",
+          "current_permits": 335,
+          "acs2024_housing_units": 9521,
+          "permits_per_1000_hu": 35.2,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 4.8
+        },
+        {
+          "zip": "37216",
+          "current_permits": 312,
+          "acs2024_housing_units": 9881,
+          "permits_per_1000_hu": 31.6,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 4.4
+        },
+        {
+          "zip": "37211",
+          "current_permits": 192,
+          "acs2024_housing_units": 35911,
+          "permits_per_1000_hu": 5.3,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 2.7
+        },
+        {
+          "zip": "37204",
+          "current_permits": 179,
+          "acs2024_housing_units": 8016,
+          "permits_per_1000_hu": 22.3,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 2.6
+        },
+        {
+          "zip": "37214",
+          "current_permits": 170,
+          "acs2024_housing_units": 15978,
+          "permits_per_1000_hu": 10.6,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 2.4
+        },
+        {
+          "zip": "37217",
+          "current_permits": 127,
+          "acs2024_housing_units": 14737,
+          "permits_per_1000_hu": 8.6,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 1.8
+        },
+        {
+          "zip": "37218",
+          "current_permits": 115,
+          "acs2024_housing_units": 6667,
+          "permits_per_1000_hu": 17.2,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 1.6
+        },
+        {
+          "zip": "37115",
+          "current_permits": 103,
+          "acs2024_housing_units": 20676,
+          "permits_per_1000_hu": 5.0,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 1.5
+        },
+        {
+          "zip": "37219",
+          "current_permits": 78,
+          "acs2024_housing_units": 2279,
+          "permits_per_1000_hu": 34.2,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 1.1
+        },
+        {
+          "zip": "37076",
+          "current_permits": 41,
+          "acs2024_housing_units": 19456,
+          "permits_per_1000_hu": 2.1,
+          "davidson_land_share_pct": 91.9,
+          "share_of_current_permits_pct": 0.6
+        },
+        {
+          "zip": "37205",
+          "current_permits": 37,
+          "acs2024_housing_units": 12641,
+          "permits_per_1000_hu": 2.9,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 0.5
+        },
+        {
+          "zip": "37138",
+          "current_permits": 30,
+          "acs2024_housing_units": 10248,
+          "permits_per_1000_hu": 2.9,
+          "davidson_land_share_pct": 70.3,
+          "share_of_current_permits_pct": 0.4
+        },
+        {
+          "zip": "37013",
+          "current_permits": 28,
+          "acs2024_housing_units": 43431,
+          "permits_per_1000_hu": 0.6,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 0.4
+        },
+        {
+          "zip": "37215",
+          "current_permits": 25,
+          "acs2024_housing_units": 11310,
+          "permits_per_1000_hu": 2.2,
+          "davidson_land_share_pct": 98.3,
+          "share_of_current_permits_pct": 0.4
+        },
+        {
+          "zip": "37189",
+          "current_permits": 23,
+          "acs2024_housing_units": 1629,
+          "permits_per_1000_hu": 14.1,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 0.3
+        },
+        {
+          "zip": "37221",
+          "current_permits": 16,
+          "acs2024_housing_units": 21079,
+          "permits_per_1000_hu": 0.8,
+          "davidson_land_share_pct": 91.9,
+          "share_of_current_permits_pct": 0.2
+        },
+        {
+          "zip": "37072",
+          "current_permits": 15,
+          "acs2024_housing_units": 14714,
+          "permits_per_1000_hu": 1.0,
+          "davidson_land_share_pct": 50.7,
+          "share_of_current_permits_pct": 0.2
+        },
+        {
+          "zip": "37220",
+          "current_permits": 9,
+          "acs2024_housing_units": 2295,
+          "permits_per_1000_hu": 3.9,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 0.1
+        },
+        {
+          "zip": "37080",
+          "current_permits": 7,
+          "acs2024_housing_units": 3307,
+          "permits_per_1000_hu": 2.1,
+          "davidson_land_share_pct": 59.4,
+          "share_of_current_permits_pct": 0.1
+        },
+        {
+          "zip": "37027",
+          "current_permits": 6,
+          "acs2024_housing_units": 23601,
+          "permits_per_1000_hu": 0.3,
+          "davidson_land_share_pct": 13.6,
+          "share_of_current_permits_pct": 0.1
+        },
+        {
+          "zip": "37143",
+          "current_permits": 3,
+          "acs2024_housing_units": 1755,
+          "permits_per_1000_hu": 1.7,
+          "davidson_land_share_pct": 18.6,
+          "share_of_current_permits_pct": 0.0
+        },
+        {
+          "zip": "37213",
+          "current_permits": 1,
+          "acs2024_housing_units": 0,
+          "permits_per_1000_hu": null,
+          "davidson_land_share_pct": 100.0,
+          "share_of_current_permits_pct": 0.0
+        },
+        {
+          "zip": "37064",
+          "current_permits": 1,
+          "acs2024_housing_units": 25718,
+          "permits_per_1000_hu": 0.0,
+          "davidson_land_share_pct": 0.8,
+          "share_of_current_permits_pct": 0.0
+        },
+        {
+          "zip": "37015",
+          "current_permits": 1,
+          "acs2024_housing_units": 8249,
+          "permits_per_1000_hu": 0.1,
+          "davidson_land_share_pct": 5.8,
+          "share_of_current_permits_pct": 0.0
+        }
+      ]
+    },
+    "trend_decomposition": {
+      "dec_2017_noo_issued": 200,
+      "dec_2017_noo_next_highest_month_2017": 113,
+      "dec_2017_505_apartments_permits": 125,
+      "jan_2018_noo_issued": 56,
+      "bop_nest_nov_dec_2018": 327,
+      "total_2018": 2181,
+      "total_2018_without_bop_nest_onboarding": 1854,
+      "sixth_south_2022": 297,
+      "total_2022": 2106,
+      "total_2022_without_sixth_south": 1809,
+      "total_2019_reference": 1993
+    }
+  }
+}
